@@ -31,5 +31,5 @@ galaxy_info:
     - name: SmartOS
   galaxy_tags:
     - web
-allow_duplicates: yes
+allow_duplicates: true
 dependencies: []

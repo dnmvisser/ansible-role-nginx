@@ -2,10 +2,10 @@
 nginx_pkgs:
   - nginx
 
-nginx_install_epel_repo: True
+nginx_install_epel_repo: true
 
-nginx_official_repo: False
-nginx_official_repo_mainline: False
+nginx_official_repo: false
+nginx_official_repo_mainline: false
 
 nginx_keep_only_specified: "{{ keep_only_specified | default(False) }}"
 
@@ -74,7 +74,7 @@ nginx_start_service: true
 # Set wether enable Nginx service on boot or not
 nginx_start_at_boot: true
 
-nginx_set_real_ip_from_cloudflare: False
+nginx_set_real_ip_from_cloudflare: false
 nginx_cloudflare_real_ip_header: "CF-Connecting-IP" # See: https://support.cloudflare.com/hc/en-us/articles/200170706-How-do-I-restore-original-visitor-IP-with-Nginx-
 nginx_cloudflare_configuration_name: "cloudflare" # Name for the conf file in the conf.d directory
 

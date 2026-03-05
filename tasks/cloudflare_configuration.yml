@@ -2,14 +2,14 @@
 - name: Get list of CloudFlare IPv4
   uri:
     url: https://www.cloudflare.com/ips-v4
-    return_content: yes
+    return_content: true
   register: cloudflare_ipv4_list
   tags: [configuration, nginx]
 
 - name: Get list of CloudFlare IPv6
   uri:
     url: https://www.cloudflare.com/ips-v6
-    return_content: yes
+    return_content: true
   register: cloudflare_ipv6_list
   tags: [configuration, nginx]
 

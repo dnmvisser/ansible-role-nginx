@@ -2,14 +2,14 @@
 
 - name: restart nginx
   debug: msg="checking config first"
-  changed_when: True
+  changed_when: true
   notify:
     - check nginx configuration
     - restart nginx - after config check
 
 - name: reload nginx
   debug: msg="checking config first"
-  changed_when: True
+  changed_when: true
   notify:
     - check nginx configuration
     - reload nginx - after config check
@@ -18,7 +18,7 @@
   command: "{{ nginx_binary_name }} -t -c {{ nginx_conf_dir }}/nginx.conf"
   register: result
   changed_when: "result.rc != 0"
-  check_mode: no
+  check_mode: false
   when: nginx_installation_type in nginx_installation_types_using_service
 
 - name: restart nginx - after config check
